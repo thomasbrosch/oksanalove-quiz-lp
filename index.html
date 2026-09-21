@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oksana Love — Women Attraction Style Quiz</title>
+<!-- STAGING PREVIEW: keeps this page out of search results.
+     Delete this meta tag AND robots.txt when this becomes the production page. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Find the approach to meeting women that fits how you are built. A 30-second assessment from a matchmaker of 30+ years.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#131A24;
+  --ink-2:#3A4757;
+  --navy:#0F2138;
+  --navy-2:#173A5E;
+  --navy-deep:#0A1726;
+  --brass:#B8873F;
+  --brass-lt:#D9A95C;
+  --cream:#FAF7F2;
+  --cream-2:#F1ECE3;
+  --line:#DED6C9;
+  --white:#fff;
+  --ok:#2E7D5B;
+  --no:#B4483C;
+  --max:1120px;
+  --r:10px;
+  --body:18.5px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,system-ui,-apple-system,sans-serif;
+  font-size:var(--body); line-height:1.65; color:var(--ink);
+  background:var(--cream); -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.serif{font-family:Fraunces,Georgia,serif; line-height:1.15; font-weight:600; letter-spacing:-.01em}
+.wrap{max-width:var(--max); margin:0 auto; padding:0 22px}
+.narrow{max-width:760px; margin:0 auto}
+section{padding:72px 0}
+.eyebrow{
+  font-size:13px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--brass); margin-bottom:16px;
+}
+.eyebrow.on-dark{color:var(--brass-lt)}
+
+/* ---------- BUTTON ---------- */
+.btn{
+  display:inline-block; background:var(--brass); color:#fff; text-decoration:none;
+  font-weight:700; font-size:17px; letter-spacing:.02em;
+  padding:19px 38px; border-radius:var(--r); border:none; cursor:pointer;
+  transition:background .18s ease, transform .18s ease;
+  box-shadow:0 2px 0 rgba(0,0,0,.14);
+}
+.btn:hover{background:#A2762F; transform:translateY(-1px)}
+.btn-lg{font-size:19px; padding:22px 46px; width:100%; max-width:430px; text-align:center}
+.btn-note{font-size:14.5px; color:var(--ink-2); margin-top:14px}
+.btn-note.on-dark{color:#A9B6C6}
+
+/* ---------- HEADER ---------- */
+header{
+  background:var(--white); border-bottom:1px solid var(--line);
+  padding:16px 0; position:sticky; top:0; z-index:50;
+}
+.hdr{display:flex; align-items:center; justify-content:space-between; gap:18px}
+.logo{font-family:Fraunces,serif; font-size:22px; font-weight:600; color:var(--navy); letter-spacing:.02em}
+.logo span{display:block; font-family:Inter,sans-serif; font-size:10px; font-weight:700;
+  letter-spacing:.3em; color:var(--brass); margin-top:-2px}
+.hdr .btn{padding:13px 26px; font-size:15px}
+
+/* ---------- HERO ---------- */
+.hero{background:var(--white); padding:64px 0 72px; border-bottom:1px solid var(--line)}
+.hero-grid{display:grid; grid-template-columns:1.08fr .92fr; gap:56px; align-items:center}
+.hero h1{font-size:clamp(34px,4.6vw,54px); color:var(--navy); margin-bottom:20px}
+.hero h1 em{font-style:italic; color:var(--brass); font-weight:600}
+.hero-sub{font-size:20px; color:var(--ink-2); margin-bottom:26px; line-height:1.55}
+.checks{list-style:none; margin-bottom:32px}
+.checks li{position:relative; padding-left:34px; margin-bottom:13px; font-size:17.5px; color:var(--ink)}
+.checks li::before{
+  content:""; position:absolute; left:0; top:8px; width:19px; height:19px;
+  border-radius:50%; background:var(--brass);
+}
+.checks li::after{
+  content:""; position:absolute; left:6px; top:13px; width:7px; height:4px;
+  border-left:2px solid #fff; border-bottom:2px solid #fff; transform:rotate(-45deg);
+}
+.credline{
+  display:inline-flex; align-items:center; gap:10px; background:var(--cream-2);
+  border:1px solid var(--line); border-radius:100px; padding:8px 18px;
+  font-size:14px; font-weight:600; color:var(--navy); margin-bottom:22px;
+}
+.credline b{color:var(--brass)}
+
+/* ---------- IMAGE SLOTS ---------- */
+.slot{
+  background:var(--cream-2); border:2px dashed #C3B49A; border-radius:var(--r);
+  padding:26px 22px; text-align:left; color:#6E6151; font-size:14px; line-height:1.5;
+}
+.slot .tag{
+  display:inline-block; background:var(--brass); color:#fff; font-size:10.5px; font-weight:700;
+  letter-spacing:.12em; text-transform:uppercase; padding:4px 10px; border-radius:4px; margin-bottom:12px;
+}
+.slot b{color:var(--ink); display:block; margin-bottom:6px; font-size:15px}
+.slot.tall{min-height:420px; display:flex; flex-direction:column; justify-content:center}
+.slot.wide{min-height:300px; display:flex; flex-direction:column; justify-content:center}
+.slot.on-dark{background:rgba(255,255,255,.05); border-color:rgba(255,255,255,.28); color:#B6C2D0}
+.slot.on-dark b{color:#fff}
+
+/* ---------- STAT BAR ---------- */
+.statbar{background:var(--navy); color:#fff; padding:36px 0}
+.stats{display:grid; grid-template-columns:repeat(3,1fr); gap:28px; text-align:center}
+.stat .n{font-family:Fraunces,serif; font-size:40px; font-weight:600; color:var(--brass-lt); line-height:1}
+.stat .l{font-size:14.5px; color:#B6C2D0; margin-top:8px; letter-spacing:.02em}
+
+/* ---------- PROBLEM ---------- */
+.problem{background:var(--cream)}
+.problem h2{font-size:clamp(28px,3.4vw,40px); color:var(--navy); margin-bottom:22px}
+.problem p{font-size:19px; color:var(--ink-2); margin-bottom:18px}
+.painlist{list-style:none; margin:30px 0 0}
+.painlist li{
+  background:var(--white); border:1px solid var(--line); border-left:4px solid var(--no);
+  border-radius:var(--r); padding:18px 22px; margin-bottom:12px;
+  font-size:17.5px; color:var(--ink);
+}
+
+/* ---------- REASONS ---------- */
+.reasons{background:var(--white)}
+.sec-head{text-align:center; max-width:720px; margin:0 auto 54px}
+.sec-head h2{font-size:clamp(28px,3.6vw,42px); color:var(--navy); margin-bottom:16px}
+.sec-head p{font-size:18.5px; color:var(--ink-2)}
+.reason{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; margin-bottom:64px}
+.reason:nth-child(even) .r-text{order:2}
+.reason .num{
+  font-family:Fraunces,serif; font-size:15px; font-weight:700; color:var(--brass);
+  letter-spacing:.16em; margin-bottom:12px;
+}
+.reason h3{font-size:clamp(23px,2.5vw,30px); color:var(--navy); margin-bottom:14px}
+.reason p{font-size:17.5px; color:var(--ink-2)}
+.reason p + p{margin-top:14px}
+
+/* ---------- CTA BAND ---------- */
+.band{background:var(--navy-deep); color:#fff; text-align:center; padding:62px 0}
+.band h2{font-size:clamp(25px,3vw,36px); margin-bottom:16px; color:#fff}
+.band p{font-size:18.5px; color:#B6C2D0; margin-bottom:28px; max-width:600px; margin-left:auto; margin-right:auto}
+
+/* ---------- TESTIMONIALS ---------- */
+.proof{background:var(--cream-2)}
+.tgrid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px}
+.tcard{
+  background:var(--white); border:1px solid var(--line); border-radius:var(--r);
+  padding:28px 26px; display:flex; flex-direction:column;
+}
+.tcard .stars{color:var(--brass); font-size:16px; letter-spacing:3px; margin-bottom:14px}
+.tcard .q{font-size:17px; color:var(--ink); line-height:1.6; flex:1}
+.tcard .who{margin-top:20px; padding-top:18px; border-top:1px solid var(--line); font-size:14.5px; color:var(--ink-2)}
+.tcard .who b{display:block; color:var(--navy); font-size:15.5px; margin-bottom:2px}
+.tcard.ph .q{color:#8A7C68; font-style:italic}
+
+/* ---------- COMPARE ---------- */
+.compare{background:var(--white)}
+table{width:100%; border-collapse:collapse; font-size:16.5px; background:var(--white)}
+th,td{padding:17px 16px; text-align:left; border-bottom:1px solid var(--line)}
+thead th{
+  font-family:Fraunces,serif; font-size:17px; color:var(--navy); font-weight:600;
+  border-bottom:2px solid var(--navy);
+}
+thead th:nth-child(2){background:var(--navy); color:#fff; border-bottom:2px solid var(--brass)}
+tbody td:nth-child(2){background:#FBF8F3; font-weight:600; color:var(--navy)}
+td:first-child{color:var(--ink-2); font-weight:500}
+.yes{color:var(--ok); font-weight:700}
+.nope{color:var(--no); font-weight:600}
+
+/* ---------- FOUNDER ---------- */
+.founder{background:var(--navy); color:#fff}
+.f-grid{display:grid; grid-template-columns:.85fr 1.15fr; gap:52px; align-items:center}
+.founder h2{color:#fff; font-size:clamp(27px,3.2vw,38px); margin-bottom:18px}
+.founder p{color:#C3CEDA; font-size:17.5px; margin-bottom:16px}
+.creds{list-style:none; margin-top:26px}
+.creds li{position:relative; padding-left:28px; margin-bottom:11px; font-size:16.5px; color:#DCE4EC}
+.creds li::before{content:""; position:absolute; left:0; top:9px; width:11px; height:11px;
+  background:var(--brass-lt); border-radius:2px; transform:rotate(45deg)}
+
+/* ---------- FAQ ---------- */
+.faq{background:var(--cream)}
+.q-item{border-bottom:1px solid var(--line); background:transparent}
+.q-btn{
+  width:100%; text-align:left; background:none; border:none; cursor:pointer;
+  font-family:Fraunces,serif; font-size:19.5px; font-weight:600; color:var(--navy);
+  padding:24px 44px 24px 0; position:relative; line-height:1.35;
+}
+.q-btn::after{
+  content:"+"; position:absolute; right:8px; top:21px; font-family:Inter,sans-serif;
+  font-size:27px; font-weight:400; color:var(--brass); transition:transform .2s ease;
+}
+.q-item.open .q-btn::after{transform:rotate(45deg)}
+.q-body{max-height:0; overflow:hidden; transition:max-height .28s ease}
+.q-body p{padding:0 40px 24px 0; font-size:17.5px; color:var(--ink-2)}
+
+/* ---------- FOOTER ---------- */
+footer{background:var(--navy-deep); color:#8FA0B2; padding:44px 0; font-size:14.5px; text-align:center}
+footer a{color:#8FA0B2; text-decoration:none; margin:0 12px; line-height:2.2}
+footer a:hover{color:#fff}
+.fnote{margin-top:22px; font-size:12.5px; color:#5F7186; max-width:640px; margin-left:auto; margin-right:auto}
+
+/* ---------- STICKY ---------- */
+.sticky{
+  position:fixed; left:0; right:0; bottom:0; background:var(--navy);
+  padding:13px 18px; display:none; z-index:60; box-shadow:0 -3px 14px rgba(0,0,0,.2);
+}
+.sticky.show{display:block}
+.sticky .btn{width:100%; text-align:center; padding:17px; font-size:17px}
+
+@media(max-width:900px){
+  :root{--body:18px}
+  section{padding:56px 0}
+  .hero-grid,.reason,.f-grid{grid-template-columns:1fr; gap:34px}
+  .reason:nth-child(even) .r-text{order:0}
+  .reason{margin-bottom:48px}
+  .tgrid{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr; gap:26px}
+  .hdr .btn{display:none}
+  .slot.tall{min-height:280px}
+  .btn-lg{max-width:100%}
+  table{font-size:15px}
+  th,td{padding:14px 11px}
+  .sticky{padding-bottom:calc(13px + env(safe-area-inset-bottom))}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hdr">
+    <div class="logo">Oksana Love<span>MATCHMAKING</span></div>
+    <a href="#quiz" class="btn">Take the Free Quiz</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="credline">Matchmaking since 1996 &nbsp;·&nbsp; <b>30+ years</b></div>
+      <h1>You're not bad at dating.<br>You're using <em>the wrong method.</em></h1>
+      <p class="hero-sub">Take the 30-second assessment and find out which approach to meeting women actually fits how you're built — and which one has been quietly wasting your time.</p>
+      <ul class="checks">
+        <li>Built for men who are done swiping</li>
+        <li>No profile to write. No photos to upload.</li>
+        <li>Your result and action plan, free, in 30 seconds</li>
+      </ul>
+      <a href="#quiz" class="btn btn-lg">Take the Free Assessment →</a>
+      <p class="btn-note">30 seconds · 7 questions · No credit card</p>
+    </div>
+    <div class="slot tall">
+      <span class="tag">Image slot — Hero</span>
+      <b>Single male subject, age 52–62.</b>
+      Seated or standing, relaxed but composed. Business-casual. Looking at camera or slightly off.
+      Warm natural light, home study / office / outdoors. Reads as <i>the man taking the quiz</i>, not a couple.
+      <br><br>
+      <b style="margin-top:10px">Do not use:</b> young couples, grids of women's headshots, romantic embraces,
+      anything shot like a dating-site banner. Portrait or 4:5. ~1200×1500.
+    </div>
+  </div>
+</div>
+
+<!-- ============ STAT BAR ============ -->
+<div class="statbar">
+  <div class="wrap stats">
+    <div class="stat"><div class="n">30+</div><div class="l">Years matchmaking, since 1996</div></div>
+    <div class="stat"><div class="n">100%</div><div class="l">Profiles verified by a human, on video</div></div>
+    <div class="stat"><div class="n">1-on-1</div><div class="l">A real matchmaker, not an algorithm</div></div>
+  </div>
+</div>
+
+<!-- ============ PROBLEM ============ -->
+<section class="problem">
+  <div class="wrap narrow">
+    <div class="eyebrow">Let's be honest about it</div>
+    <h2>The apps didn't fail you because you did something wrong.</h2>
+    <p>They failed you because they were never built to get you into a relationship. They were built to keep you scrolling. And after enough months of it, most men land in the same place:</p>
+    <ul class="painlist">
+      <li>You match, you talk for four days, and she vanishes with no explanation.</li>
+      <li>You're carrying the whole conversation — and paying for the whole date.</li>
+      <li>Half the profiles don't appear to be real people at all — and some are outright scams, run by someone who is very good at this.</li>
+      <li>You've been out of the game long enough that starting feels worse than staying home.</li>
+      <li>You know how to approach a boardroom. Approaching a woman still makes your stomach drop.</li>
+    </ul>
+    <p style="margin-top:28px">None of that means you're out of options. It means the method is wrong for you. There's more than one way to meet a woman worth keeping — and the one that works for you depends on how you're actually wired.</p>
+    <p style="margin-top:22px"><b>That's what the assessment sorts out.</b></p>
+    <div style="margin-top:34px"><a href="#quiz" class="btn">Find My Approach →</a></div>
+  </div>
+</section>
+
+<!-- ============ REASONS ============ -->
+<section class="reasons">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">What's on the other side</div>
+      <h2>Four things that change when a matchmaker runs the process</h2>
+      <p>Your quiz result points you to the approach that fits. Here's what the process looks like when it's handled properly.</p>
+    </div>
+
+    <div class="reason">
+      <div class="r-text">
+        <div class="num">01</div>
+        <h3>You stop approaching. Entirely.</h3>
+        <p>You never message a stranger and hope. A matchmaker introduces you to women who already know who you are and have said yes to meeting you.</p>
+        <p>For the men who've told us that approaching is the single worst part of dating — the engineers, the quiet high performers — this is the part that changes everything.</p>
+      </div>
+      <div class="slot wide">
+        <span class="tag">Image slot 01</span>
+        <b>Man on a video call, mid-conversation, smiling.</b>
+        Shot over his shoulder or from the side. Screen content blurred or out of frame.
+        Communicates "guided introduction," not "browsing profiles." 4:3, ~1000×750.
+      </div>
+    </div>
+
+    <div class="reason">
+      <div class="r-text">
+        <div class="num">02</div>
+        <h3>Every woman you meet is a verified human being.</h3>
+        <p>Every profile is verified by a person — on camera, on a live video call. Each woman sits for a recorded interview that you can watch before you ever speak to her.</p>
+        <p>You will know her face, her voice, and how she carries herself before you spend a minute of your time.</p>
+      </div>
+      <div class="slot wide">
+        <span class="tag">Image slot 02</span>
+        <b>Matchmaker at work — a staff member on a verification call.</b>
+        Professional office setting, headset, notes. The subject is <i>the verification process</i>.
+        Do not show a gallery of member photos here. 4:3, ~1000×750.
+      </div>
+    </div>
+
+    <div class="reason">
+      <div class="r-text">
+        <div class="num">03</div>
+        <h3>She's invested too.</h3>
+        <p>The women in this community pay to be here and complete a structured relationship program before they're introduced to anyone. That filter does more work than any algorithm.</p>
+        <p>It's the difference between a woman who's curious and a woman who's serious. You've met plenty of the first kind.</p>
+      </div>
+      <div class="slot wide">
+        <span class="tag">Image slot 03</span>
+        <b>Abstract / conceptual — no faces.</b>
+        A coaching session, a workbook on a table, a small group class shot from behind.
+        Keeps the focus on commitment and standards. 4:3, ~1000×750.
+      </div>
+    </div>
+
+    <div class="reason">
+      <div class="r-text">
+        <div class="num">04</div>
+        <h3>You find out what it's really like — early.</h3>
+        <p>Restaurant dates reward whoever performs best over two hours. This process is built to get past the performance: guided video introductions first, then real time together, with a matchmaker helping both of you read what's actually happening.</p>
+        <p>You see each other in ordinary life, not on a stage. That's where you learn whether it works.</p>
+      </div>
+      <div class="slot wide">
+        <span class="tag">Image slot 04</span>
+        <b>Couple aged 50+, ordinary moment.</b> Cooking, walking, coffee at a kitchen table.
+        Warm, unposed, age-accurate. <i>Both</i> people clearly in their 50s.
+        No embracing, no soft-focus romance, nothing suggestive. 4:3, ~1000×750.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<div class="band" id="quiz">
+  <div class="wrap">
+    <p style="max-width:720px; margin:0 auto 34px; font-family:Fraunces,Georgia,serif; font-size:clamp(19px,2.1vw,25px); font-style:italic; line-height:1.5; color:#DCE4EC">
+      “I almost lost hope in true love before I met you… I didn't know that women like this exist until you introduced me to HER.”
+      <span style="display:block; font-family:Inter,sans-serif; font-style:normal; font-size:14.5px; color:#8FA0B2; margin-top:14px; letter-spacing:.04em">SHAWN · CLIENT TESTIMONIAL</span>
+    </p>
+    <div class="eyebrow on-dark">Start here</div>
+    <h2>Which approach actually fits you?</h2>
+    <p>Seven questions, thirty seconds. You'll get your Women Attraction Style and a practical plan you can use this week — whether you ever work with us or not.</p>
+    <a href="#" class="btn btn-lg" data-cta="quiz">Take the Free Assessment →</a>
+    <p class="btn-note on-dark">No credit card. No profile to build. Your result is emailed to you.</p>
+  </div>
+</div>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="proof">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">In their words</div>
+      <h2>Men who stopped doing it alone</h2>
+    </div>
+    <div class="tgrid">
+      <div class="tcard">
+        <div class="stars">★★★★★</div>
+        <div class="q">“I almost lost hope in true love before I met you. You gave me hope, you gave me a chance to finally learn what true love is… I didn't know that women like this exist until you introduced me to HER. Though at first I was a &lsquo;challenge&rsquo;. Words won't express full gratitude I have for your help.”</div>
+        <div class="who"><b>Shawn</b>Client testimonial &mdash; [add age / state if available]</div>
+      </div>
+      <div class="tcard">
+        <div class="stars">★★★★★</div>
+        <div class="q">“My previous relationship was a 17 year engagement… Shortly after the split I posted a profile on Yahoo Personals — essentially on whim. Shortly after that I received a letter from a somewhat attractive &lsquo;lady&rsquo; named Lana… Luckily I realized this was a scam/set up before I got scammed. I started doing research on internet dating scams and quickly found [an] article by Oksana Boichenko which ultimately lead me to her site.”</div>
+        <div class="who"><b>[Name needed]</b>Client testimonial &mdash; [add age / state if available]</div>
+      </div>
+      <div class="tcard">
+        <div class="stars">★★★★★</div>
+        <div class="q">“I met the woman of my dreams on OksanaLove. We are engaged and will be married soon. This is a serious matchmaking business… Good luck to all.”</div>
+        <div class="who"><b>Bill</b>Client testimonial &mdash; [add age / state if available]</div>
+      </div>
+    </div>
+    <p style="text-align:center; margin-top:30px; font-size:15px; color:#7A6E5D">
+      Individual experiences vary. Testimonials reflect these clients' own experiences and are not a promise of results.
+    </p>
+  </div>
+</section>
+
+<!-- ============ COMPARE ============ -->
+<section class="compare">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">An honest comparison</div>
+      <h2>Three ways to meet someone</h2>
+      <p>All three can work. They cost you very different things.</p>
+    </div>
+    <table>
+      <thead>
+        <tr><th></th><th>Oksana Love</th><th>Dating apps</th><th>On your own</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Costs money</td><td class="nope">Yes</td><td>Yes (most)</td><td class="yes">No</td></tr>
+        <tr><td>You have to approach women</td><td class="yes">Never</td><td class="nope">Every time</td><td class="nope">Every time</td></tr>
+        <tr><td>Profiles verified by a human</td><td class="yes">Every one</td><td class="nope">No</td><td>n/a</td></tr>
+        <tr><td>Someone screens for you</td><td class="yes">A matchmaker</td><td class="nope">An algorithm</td><td class="nope">You do</td></tr>
+        <tr><td>She's already said yes before you meet</td><td class="yes">Yes</td><td class="nope">No</td><td class="nope">No</td></tr>
+        <tr><td>Coaching when it gets hard</td><td class="yes">Included</td><td class="nope">None</td><td class="nope">None</td></tr>
+        <tr><td>Your time spent per month</td><td>A few hours</td><td class="nope">Hours per week</td><td class="nope">Unpredictable</td></tr>
+      </tbody>
+    </table>
+    <p style="text-align:center; margin-top:28px; font-size:15px; color:#7A6E5D">
+      First row is honest on purpose. This costs money and the apps are cheaper. The question is what your last two years were worth.
+    </p>
+    <div style="text-align:center; margin-top:32px"><a href="#quiz" class="btn">See Which One Fits You →</a></div>
+  </div>
+</section>
+
+<!-- ============ FOUNDER ============ -->
+<section class="founder">
+  <div class="wrap f-grid">
+    <div class="slot tall on-dark">
+      <span class="tag">Image slot — Founder</span>
+      <b>Professional portrait of Oksana.</b>
+      Business attire — blazer or tailored professional dress. Seated at a desk or standing in an office.
+      Shot like a 30-year business owner, because that is the claim we're making.
+      <br><br>
+      <b style="margin-top:10px">Replace the current image:</b> the cocktail-dress cutout on white reads as a
+      dating-site host, not a professional advisor — and body-forward framing is a Meta review risk.
+      Portrait 4:5, ~900×1125.
+    </div>
+    <div>
+      <div class="eyebrow on-dark">Who's behind this</div>
+      <h2>Oksana Boichenko</h2>
+      <p>Oksana has been a professional matchmaker since 1996. Over three decades she's built a practice around one stubborn belief: that serious people find each other faster when someone competent is in the room.</p>
+      <p>She's worked with thousands of men and women through private matchmaking, coaching programs and live events — most of them accomplished, most of them busy, most of them convinced their situation was the exception.</p>
+      <ul class="creds">
+        <li>A professional matchmaker since 1996</li>
+        <li>Personally interviews and verifies members on camera</li>
+        <li>Built the structured relationship program every woman completes</li>
+        <li>Hosts a weekly dating strategy channel for men</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq">
+  <div class="wrap narrow">
+    <div class="sec-head">
+      <div class="eyebrow">Straight answers</div>
+      <h2>The questions men actually ask</h2>
+    </div>
+
+    <div class="q-item">
+      <button class="q-btn">Why should I pay for something that's supposed to happen naturally?</button>
+      <div class="q-body"><p>You're not paying for a relationship. You're paying for the part you can't do from your desk — someone who screens, verifies, introduces, and coaches. Plenty of men meet someone without help. If that was going to happen on its own, it probably already would have.</p></div>
+    </div>
+
+    <div class="q-item">
+      <button class="q-btn">Can't you just give me her contact information?</button>
+      <div class="q-body"><p>That's the fastest way to end up exactly where the apps left you. The introduction is guided for a reason — both people have been prepared, and someone is paying attention to how it actually goes. That structure is the product.</p></div>
+    </div>
+
+    <div class="q-item">
+      <button class="q-btn">I don't need a matchmaker. I just need access to quality women.</button>
+      <div class="q-body"><p>Fair. And access is genuinely part of it — every woman here is verified and has invested in being ready. But access alone is what a dating app sells, and you've already run that experiment. The difference is that someone is choosing <i>for fit</i>, and staying with you through it.</p></div>
+    </div>
+
+    <div class="q-item">
+      <button class="q-btn">What guarantee do I have that it'll work?</button>
+      <div class="q-body"><p>None, and anyone promising you one is selling something. Two people have to actually want each other. What we can commit to is the process: verified people, prepared introductions, honest coaching, and a matchmaker who tells you the truth when something isn't working.</p></div>
+    </div>
+
+    <div class="q-item">
+      <button class="q-btn">I've been out of dating a long time. Is that a problem?</button>
+      <div class="q-body"><p>It's the most common thing we hear, usually from men who've been married a long time or focused on building something. The rules did change. That's a reason to have someone walking you through it, not a reason to wait longer.</p></div>
+    </div>
+
+    <div class="q-item">
+      <button class="q-btn">Does the quiz cost anything or commit me to something?</button>
+      <div class="q-body"><p>No. Seven questions, about thirty seconds, and you get your result plus a plan you can act on whether or not you ever talk to us.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING ============ -->
+<div class="band">
+  <div class="wrap">
+    <div class="eyebrow on-dark">30+ years · Verified members · Real matchmakers</div>
+    <h2>Thirty seconds is a short time to spend<br>on a question this old.</h2>
+    <p>Find out which approach to meeting women fits how you're actually built.</p>
+    <a href="#" class="btn btn-lg" data-cta="quiz">Take the Free Assessment →</a>
+    <p class="btn-note on-dark">No credit card · No profile · Result emailed to you</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a href="#">About</a><a href="#">Contact</a><a href="#">Terms &amp; Conditions</a><a href="#">Privacy Policy</a>
+    </div>
+    <p style="margin-top:18px">© 2026 OksanaLove, Inc. All rights reserved.</p>
+    <p class="fnote">Oksana Love provides matchmaking, coaching and introduction services. Testimonials reflect individual experiences and are not a guarantee of any particular outcome. Services are available to adults 18 and over.</p>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky">
+  <a href="#quiz" class="btn">Take the Free Assessment →</a>
+</div>
+
+<script>
+// FAQ accordion
+document.querySelectorAll('.q-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var item = btn.parentElement;
+    var body = item.querySelector('.q-body');
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.q-item').forEach(function(i){
+      i.classList.remove('open');
+      i.querySelector('.q-body').style.maxHeight = null;
+    });
+    if(!isOpen){
+      item.classList.add('open');
+      body.style.maxHeight = body.scrollHeight + 'px';
+    }
+  });
+});
+
+// Sticky mobile CTA after hero
+var sticky = document.getElementById('sticky');
+var hero = document.querySelector('.hero');
+window.addEventListener('scroll', function(){
+  var past = window.scrollY > (hero.offsetHeight + 120);
+  var atEnd = (window.innerHeight + window.scrollY) > (document.body.offsetHeight - 260);
+  if(past && !atEnd && window.innerWidth < 900){ sticky.classList.add('show'); }
+  else { sticky.classList.remove('show'); }
+}, {passive:true});
+
+// Quiz CTA hook — point these at the live quiz URL on build
+document.querySelectorAll('[data-cta="quiz"]').forEach(function(a){
+  a.addEventListener('click', function(e){
+    e.preventDefault();
+    alert('Wire this to the live quiz start URL.');
+  });
+});
+</script>
+</body>
+</html>
