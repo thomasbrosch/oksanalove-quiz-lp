@@ -146,6 +146,15 @@ header{
 .band h2{font-size:clamp(25px,3vw,36px); margin-bottom:16px; color:#fff}
 .band p{font-size:18.5px; color:#B6C2D0; margin-bottom:28px; max-width:600px; margin-left:auto; margin-right:auto}
 
+/* light variant of CTA band */
+.band-light{background:var(--cream); color:var(--ink); border-bottom:1px solid var(--line)}
+.band-light h2{color:var(--navy)}
+.band-light p{color:var(--ink-2)}
+
+/* photos */
+.photo{display:block; width:100%; height:auto; border-radius:var(--r); box-shadow:0 10px 30px rgba(15,33,56,.16)}
+.founder .photo{box-shadow:0 10px 30px rgba(0,0,0,.35)}
+
 /* ---------- TESTIMONIALS ---------- */
 .proof{background:var(--cream-2)}
 .tgrid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px}
@@ -200,7 +209,7 @@ td:first-child{color:var(--ink-2); font-weight:500}
 .q-body p{padding:0 40px 24px 0; font-size:17.5px; color:var(--ink-2)}
 
 /* ---------- FOOTER ---------- */
-footer{background:var(--navy-deep); color:#8FA0B2; padding:44px 0; font-size:14.5px; text-align:center}
+footer{background:var(--navy); color:#8FA0B2; padding:44px 0; font-size:14.5px; text-align:center}
 footer a{color:#8FA0B2; text-decoration:none; margin:0 12px; line-height:2.2}
 footer a:hover{color:#fff}
 .fnote{margin-top:22px; font-size:12.5px; color:#5F7186; max-width:640px; margin-left:auto; margin-right:auto}
@@ -254,15 +263,7 @@ footer a:hover{color:#fff}
       <a href="#quiz" class="btn btn-lg">Take the Free Assessment →</a>
       <p class="btn-note">30 seconds · 7 questions · No credit card</p>
     </div>
-    <div class="slot tall">
-      <span class="tag">Image slot — Hero</span>
-      <b>Single male subject, age 52–62.</b>
-      Seated or standing, relaxed but composed. Business-casual. Looking at camera or slightly off.
-      Warm natural light, home study / office / outdoors. Reads as <i>the man taking the quiz</i>, not a couple.
-      <br><br>
-      <b style="margin-top:10px">Do not use:</b> young couples, grids of women's headshots, romantic embraces,
-      anything shot like a swipe-app banner. Portrait or 4:5. ~1200×1500.
-    </div>
+    <img class="photo" src="images/hero.jpg" alt="A man in his fifties seated at a desk in a home study with bookshelves behind him" width="1000" height="1240" fetchpriority="high">
   </div>
 </div>
 
@@ -275,183 +276,25 @@ footer a:hover{color:#fff}
   </div>
 </div>
 
-<!-- ============ PROBLEM ============ -->
-<section class="problem">
-  <div class="wrap narrow">
-    <div class="eyebrow">Let's be honest about it</div>
-    <h2>The apps didn't fail you because you did something wrong.</h2>
-    <p>They failed you because they were never built to get you into a relationship. They were built to keep you scrolling. And after enough months of it, most men land in the same place:</p>
-    <ul class="painlist">
-      <li>You match, you talk for four days, and she vanishes with no explanation.</li>
-      <li>You're carrying the whole conversation — and paying for the whole date.</li>
-      <li>Half the profiles don't appear to be real people at all — and some are outright scams, run by someone who is very good at this.</li>
-      <li>You've been out of the game long enough that starting feels worse than staying home.</li>
-      <li>You know how to approach a boardroom. Approaching a woman still makes your stomach drop.</li>
-    </ul>
-    <p style="margin-top:28px">None of that means you're out of options. It means the method is wrong for you. There's more than one way to meet a woman worth keeping — and the one that works for you depends on how you're actually wired.</p>
-    <p style="margin-top:22px"><b>That's what the assessment sorts out.</b></p>
-    <div style="margin-top:34px"><a href="#quiz" class="btn">Find My Approach →</a></div>
-  </div>
-</section>
-
-<!-- ============ REASONS ============ -->
-<section class="reasons">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">What's on the other side</div>
-      <h2>Four things that change when a matchmaker runs the process</h2>
-      <p>Your quiz result points you to the approach that fits. Here's what the process looks like when it's handled properly.</p>
-    </div>
-
-    <div class="reason">
-      <div class="r-text">
-        <div class="num">01</div>
-        <h3>You stop approaching. Entirely.</h3>
-        <p>You never message a stranger and hope. A matchmaker introduces you to women who already know who you are and have said yes to meeting you.</p>
-        <p>For the men who've told us that approaching is the single worst part of meeting someone new — the engineers, the quiet high performers — this is the part that changes everything.</p>
-      </div>
-      <div class="slot wide">
-        <span class="tag">Image slot 01</span>
-        <b>Man on a video call, mid-conversation, smiling.</b>
-        Shot over his shoulder or from the side. Screen content blurred or out of frame.
-        Communicates "guided introduction," not "browsing profiles." 4:3, ~1000×750.
-      </div>
-    </div>
-
-    <div class="reason">
-      <div class="r-text">
-        <div class="num">02</div>
-        <h3>Every woman you meet is a verified human being.</h3>
-        <p>Every profile is verified by a person — on camera, on a live video call. Each woman sits for a recorded interview that you can watch before you ever speak to her.</p>
-        <p>You will know her face, her voice, and how she carries herself before you spend a minute of your time.</p>
-      </div>
-      <div class="slot wide">
-        <span class="tag">Image slot 02</span>
-        <b>Matchmaker at work — a staff member on a verification call.</b>
-        Professional office setting, headset, notes. The subject is <i>the verification process</i>.
-        Do not show a gallery of member photos here. 4:3, ~1000×750.
-      </div>
-    </div>
-
-    <div class="reason">
-      <div class="r-text">
-        <div class="num">03</div>
-        <h3>She's invested too.</h3>
-        <p>The women in this community pay to be here and complete a structured relationship program before they're introduced to anyone. That filter does more work than any algorithm.</p>
-        <p>It's the difference between a woman who's curious and a woman who's serious. You've met plenty of the first kind.</p>
-      </div>
-      <div class="slot wide">
-        <span class="tag">Image slot 03</span>
-        <b>Abstract / conceptual — no faces.</b>
-        A coaching session, a workbook on a table, a small group class shot from behind.
-        Keeps the focus on commitment and standards. 4:3, ~1000×750.
-      </div>
-    </div>
-
-    <div class="reason">
-      <div class="r-text">
-        <div class="num">04</div>
-        <h3>You find out what it's really like — early.</h3>
-        <p>Restaurant dates reward whoever performs best over two hours. This process is built to get past the performance: guided video introductions first, then real time together, with a matchmaker helping both of you read what's actually happening.</p>
-        <p>You see each other in ordinary life, not on a stage. That's where you learn whether it works.</p>
-      </div>
-      <div class="slot wide">
-        <span class="tag">Image slot 04</span>
-        <b>Couple aged 50+, ordinary moment.</b> Cooking, walking, coffee at a kitchen table.
-        Warm, unposed, age-accurate. <i>Both</i> people clearly in their 50s.
-        No embracing, no soft-focus romance, nothing suggestive. 4:3, ~1000×750.
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ CTA BAND ============ -->
-<div class="band" id="quiz">
+<div class="band band-light" id="quiz">
   <div class="wrap">
-    <p style="max-width:720px; margin:0 auto 34px; font-family:Fraunces,Georgia,serif; font-size:clamp(19px,2.1vw,25px); font-style:italic; line-height:1.5; color:#DCE4EC">
+    <p style="max-width:720px; margin:0 auto 34px; font-family:Fraunces,Georgia,serif; font-size:clamp(19px,2.1vw,25px); font-style:italic; line-height:1.5; color:var(--ink)">
       “I almost lost hope in true love before I met you… I didn't know that women like this exist until you introduced me to HER.”
-      <span style="display:block; font-family:Inter,sans-serif; font-style:normal; font-size:14.5px; color:#8FA0B2; margin-top:14px; letter-spacing:.04em">SHAWN · CLIENT TESTIMONIAL</span>
+      <span style="display:block; font-family:Inter,sans-serif; font-style:normal; font-size:14.5px; color:#7A6E5D; margin-top:14px; letter-spacing:.04em">SHAWN · CLIENT TESTIMONIAL</span>
     </p>
-    <div class="eyebrow on-dark">Start here</div>
+    <div class="eyebrow">Start here</div>
     <h2>Which approach actually fits you?</h2>
     <p>Seven questions, thirty seconds. You'll get your Women Attraction Style and a practical plan you can use this week — whether you ever work with us or not.</p>
     <a href="#" class="btn btn-lg" data-cta="quiz">Take the Free Assessment →</a>
-    <p class="btn-note on-dark">No credit card. No profile to build. Your result is emailed to you.</p>
+    <p class="btn-note">No credit card. No profile to build. Your result is emailed to you.</p>
   </div>
 </div>
-
-<!-- ============ TESTIMONIALS ============ -->
-<section class="proof">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">In their words</div>
-      <h2>Men who stopped doing it alone</h2>
-    </div>
-    <div class="tgrid">
-      <div class="tcard">
-        <div class="stars">★★★★★</div>
-        <div class="q">“I almost lost hope in true love before I met you. You gave me hope, you gave me a chance to finally learn what true love is… I didn't know that women like this exist until you introduced me to HER. Though at first I was a &lsquo;challenge&rsquo;. Words won't express full gratitude I have for your help.”</div>
-        <div class="who"><b>Shawn</b>Client testimonial &mdash; [add age / state if available]</div>
-      </div>
-      <div class="tcard">
-        <div class="stars">★★★★★</div>
-        <div class="q">“My previous relationship was a 17 year engagement… Shortly after the split I posted a profile on Yahoo Personals — essentially on whim. Shortly after that I received a letter from a somewhat attractive &lsquo;lady&rsquo; named Lana… Luckily I realized this was a scam/set up before I got scammed. I started doing research on internet dating scams and quickly found [an] article by Oksana Boichenko which ultimately lead me to her site.”</div>
-        <div class="who"><b>[Name needed]</b>Client testimonial &mdash; [add age / state if available]</div>
-      </div>
-      <div class="tcard">
-        <div class="stars">★★★★★</div>
-        <div class="q">“I met the woman of my dreams on OksanaLove. We are engaged and will be married soon. This is a serious matchmaking business… Good luck to all.”</div>
-        <div class="who"><b>Bill</b>Client testimonial &mdash; [add age / state if available]</div>
-      </div>
-    </div>
-    <p style="text-align:center; margin-top:30px; font-size:15px; color:#7A6E5D">
-      Individual experiences vary. Testimonials reflect these clients' own experiences and are not a promise of results.
-    </p>
-  </div>
-</section>
-
-<!-- ============ COMPARE ============ -->
-<section class="compare">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">An honest comparison</div>
-      <h2>Three ways to meet someone</h2>
-      <p>All three can work. They cost you very different things.</p>
-    </div>
-    <table>
-      <thead>
-        <tr><th></th><th>Oksana Love</th><th>Other apps</th><th>On your own</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Costs money</td><td class="nope">Yes</td><td>Yes (most)</td><td class="yes">No</td></tr>
-        <tr><td>You have to approach women</td><td class="yes">Never</td><td class="nope">Every time</td><td class="nope">Every time</td></tr>
-        <tr><td>Profiles verified by a human</td><td class="yes">Every one</td><td class="nope">No</td><td>n/a</td></tr>
-        <tr><td>Someone screens for you</td><td class="yes">A matchmaker</td><td class="nope">An algorithm</td><td class="nope">You do</td></tr>
-        <tr><td>She's already said yes before you meet</td><td class="yes">Yes</td><td class="nope">No</td><td class="nope">No</td></tr>
-        <tr><td>Coaching when it gets hard</td><td class="yes">Included</td><td class="nope">None</td><td class="nope">None</td></tr>
-        <tr><td>Your time spent per month</td><td>A few hours</td><td class="nope">Hours per week</td><td class="nope">Unpredictable</td></tr>
-      </tbody>
-    </table>
-    <p style="text-align:center; margin-top:28px; font-size:15px; color:#7A6E5D">
-      First row is honest on purpose. This costs money and the apps are cheaper. The question is what your last two years were worth.
-    </p>
-    <div style="text-align:center; margin-top:32px"><a href="#quiz" class="btn">See Which One Fits You →</a></div>
-  </div>
-</section>
 
 <!-- ============ FOUNDER ============ -->
 <section class="founder">
   <div class="wrap f-grid">
-    <div class="slot tall on-dark">
-      <span class="tag">Image slot — Founder</span>
-      <b>Professional portrait of Oksana.</b>
-      Business attire — blazer or tailored professional dress. Seated at a desk or standing in an office.
-      Shot like a 30-year business owner, because that is the claim we're making.
-      <br><br>
-      <b style="margin-top:10px">Replace the current image:</b> the cocktail-dress cutout on white reads as a
-      app-profile host, not a professional advisor — and body-forward framing is a Meta review risk.
-      Portrait 4:5, ~900×1125.
-    </div>
+    <img class="photo" src="images/oksana.jpg" alt="Oksana Boichenko, professional matchmaker" width="900" height="1058" loading="lazy">
     <div>
       <div class="eyebrow on-dark">Who's behind this</div>
       <h2>Oksana Boichenko</h2>
@@ -463,46 +306,6 @@ footer a:hover{color:#fff}
         <li>Built the structured relationship program every woman completes</li>
         <li>Hosts a weekly relationship strategy channel for men</li>
       </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FAQ ============ -->
-<section class="faq">
-  <div class="wrap narrow">
-    <div class="sec-head">
-      <div class="eyebrow">Straight answers</div>
-      <h2>The questions men actually ask</h2>
-    </div>
-
-    <div class="q-item">
-      <button class="q-btn">Why should I pay for something that's supposed to happen naturally?</button>
-      <div class="q-body"><p>You're not paying for a relationship. You're paying for the part you can't do from your desk — someone who screens, verifies, introduces, and coaches. Plenty of men meet someone without help. If that was going to happen on its own, it probably already would have.</p></div>
-    </div>
-
-    <div class="q-item">
-      <button class="q-btn">Can't you just give me her contact information?</button>
-      <div class="q-body"><p>That's the fastest way to end up exactly where the apps left you. The introduction is guided for a reason — both people have been prepared, and someone is paying attention to how it actually goes. That structure is the product.</p></div>
-    </div>
-
-    <div class="q-item">
-      <button class="q-btn">I don't need a matchmaker. I just need access to quality women.</button>
-      <div class="q-body"><p>Fair. And access is genuinely part of it — every woman here is verified and has invested in being ready. But access alone is what a swipe app sells, and you've already run that experiment. The difference is that someone is choosing <i>for fit</i>, and staying with you through it.</p></div>
-    </div>
-
-    <div class="q-item">
-      <button class="q-btn">What guarantee do I have that it'll work?</button>
-      <div class="q-body"><p>None, and anyone promising you one is selling something. Two people have to actually want each other. What we can commit to is the process: verified people, prepared introductions, honest coaching, and a matchmaker who tells you the truth when something isn't working.</p></div>
-    </div>
-
-    <div class="q-item">
-      <button class="q-btn">I've been out of the game a long time. Is that a problem?</button>
-      <div class="q-body"><p>It's the most common thing we hear, usually from men who've been married a long time or focused on building something. The rules did change. That's a reason to have someone walking you through it, not a reason to wait longer.</p></div>
-    </div>
-
-    <div class="q-item">
-      <button class="q-btn">Does the quiz cost anything or commit me to something?</button>
-      <div class="q-body"><p>No. Seven questions, about thirty seconds, and you get your result plus a plan you can act on whether or not you ever talk to us.</p></div>
     </div>
   </div>
 </section>
@@ -533,23 +336,6 @@ footer a:hover{color:#fff}
 </div>
 
 <script>
-// FAQ accordion
-document.querySelectorAll('.q-btn').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var item = btn.parentElement;
-    var body = item.querySelector('.q-body');
-    var isOpen = item.classList.contains('open');
-    document.querySelectorAll('.q-item').forEach(function(i){
-      i.classList.remove('open');
-      i.querySelector('.q-body').style.maxHeight = null;
-    });
-    if(!isOpen){
-      item.classList.add('open');
-      body.style.maxHeight = body.scrollHeight + 'px';
-    }
-  });
-});
-
 // Sticky mobile CTA after hero
 var sticky = document.getElementById('sticky');
 var hero = document.querySelector('.hero');
