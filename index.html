@@ -244,7 +244,7 @@ footer a:hover{color:#fff}
 <header>
   <div class="wrap hdr">
     <div class="logo">Oksana Love<span>MATCHMAKING</span></div>
-    <a href="#quiz" class="btn">Take the Free Quiz</a>
+    <a href="https://form.typeform.com/to/ZK9kgBsr" class="btn" rel="noopener">Take the Free Quiz</a>
   </div>
 </header>
 
@@ -260,7 +260,7 @@ footer a:hover{color:#fff}
         <li>No profile to write. No photos to upload.</li>
         <li>Your result and action plan, free, in 30 seconds</li>
       </ul>
-      <a href="#quiz" class="btn btn-lg">Take the Free Assessment →</a>
+      <a href="https://form.typeform.com/to/ZK9kgBsr" class="btn btn-lg" rel="noopener">Take the Free Assessment →</a>
       <p class="btn-note">30 seconds · 7 questions · No credit card</p>
     </div>
     <img class="photo" src="images/hero.jpg" alt="A man in his fifties seated at a desk in a home study with bookshelves behind him" width="1000" height="1240" fetchpriority="high">
@@ -286,7 +286,7 @@ footer a:hover{color:#fff}
     <div class="eyebrow">Start here</div>
     <h2>Which approach actually fits you?</h2>
     <p>Seven questions, thirty seconds. You'll get your Women Attraction Style and a practical plan you can use this week — whether you ever work with us or not.</p>
-    <a href="#" class="btn btn-lg" data-cta="quiz">Take the Free Assessment →</a>
+    <a href="https://form.typeform.com/to/ZK9kgBsr" class="btn btn-lg" rel="noopener">Take the Free Assessment →</a>
     <p class="btn-note">No credit card. No profile to build. Your result is emailed to you.</p>
   </div>
 </div>
@@ -316,7 +316,7 @@ footer a:hover{color:#fff}
     <div class="eyebrow on-dark">30+ years · Verified members · Real matchmakers</div>
     <h2>Thirty seconds is a short time to spend<br>on a question this old.</h2>
     <p>Find out which approach to meeting women fits how you're actually built.</p>
-    <a href="#" class="btn btn-lg" data-cta="quiz">Take the Free Assessment →</a>
+    <a href="https://form.typeform.com/to/ZK9kgBsr" class="btn btn-lg" rel="noopener">Take the Free Assessment →</a>
     <p class="btn-note on-dark">No credit card · No profile · Result emailed to you</p>
   </div>
 </div>
@@ -332,7 +332,7 @@ footer a:hover{color:#fff}
 </footer>
 
 <div class="sticky" id="sticky">
-  <a href="#quiz" class="btn">Take the Free Assessment →</a>
+  <a href="https://form.typeform.com/to/ZK9kgBsr" class="btn" rel="noopener">Take the Free Assessment →</a>
 </div>
 
 <script>
@@ -345,14 +345,6 @@ window.addEventListener('scroll', function(){
   if(past && !atEnd && window.innerWidth < 900){ sticky.classList.add('show'); }
   else { sticky.classList.remove('show'); }
 }, {passive:true});
-
-// Quiz CTA hook — point these at the live quiz URL on build
-document.querySelectorAll('[data-cta="quiz"]').forEach(function(a){
-  a.addEventListener('click', function(e){
-    e.preventDefault();
-    alert('Wire this to the live quiz start URL.');
-  });
-});
 </script>
 </body>
 </html>
